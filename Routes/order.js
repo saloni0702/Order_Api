@@ -27,7 +27,7 @@ router.post("/", async (req,res)=>
                             console.log(d);
                             InventoryModel.updateOne({Inventory_Id:inventory[0].Inventory_Id},{Quantity:d}).then((user1)=>{
 
-                                res.status(200).send({user1});  
+                                res.redirect("/detail");  
                             })
 
                         }).catch((err)=>{
