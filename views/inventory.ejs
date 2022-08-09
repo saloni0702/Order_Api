@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<style>
+			body{
+				background-color: aqua;
+			}
+			table, th, td{
+				  border: 1px solid black;
+				  border-collapse: collapse;
+			}
+			.id{
+				width: 100px;
+			}
+			.type{
+				width: 120px;
+			}
+			.name{
+				width: 130px;
+			}
+			.quantity{
+				width: 170px;
+			}
+			a{
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="home">
+			<h1>Welcome To Inventory Page!!</h1> 
+				<h3>Inventory Table</h3>
+				<table>
+				<tr>
+					<th class="id">Inventory_Id</th>
+					<th class="type">Inventory_Type</th>
+					<th class="name">Item_Name</th>
+					<th class="quantity">Qauntity</th>
+				</tr>
+			</table>
+				<% for(let i=0;i<invent.length;i++){%>
+				<table>
+				<tr>
+					<td class="id"><%= invent[i].Inventory_Id %></td>
+					<td class="type"><%= invent[i].Inventory_Type %></td>
+					<td class="name"><%= invent[i].Item_Name %></td>
+					<td class="quantity"><%= invent[i].Quantity %></td>
+				</tr>
+			</table><%}%>
+			<br/><br/><br/>
+		<a href="/signup">Customer</a>
+		</div>
+	</body>
+</html>

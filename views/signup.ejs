@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<style>
+			body{
+				background-color: aqua;
+			}
+			table, th, td{
+				  border: 1px solid black;
+				  border-collapse: collapse;
+			}
+			.id{
+				width: 100px;
+			}
+			.name{
+				width: 130px;
+			}
+			.email{
+				width: 170px;
+			}
+			a{
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="home">
+			<h1>Welcome To Customer Page!!</h1> 
+				<h3>Customer Table</h3>
+				<table>
+				<tr>
+					<th class="id">Customer_Id</th>
+					<th class="name">Customer_Name</th>
+					<th class="email">Customer_Email</th>
+				</tr>
+			</table>
+				<% for(let i=0;i<user.length;i++){%>
+				<table>
+				<tr>
+					<td class="id"><%= user[i].Customer_Id %></td>
+					<td class="name"><%= user[i].Customer_name %></td>
+					<td class="email"><%= user[i].Customer_Email %></td>
+				</tr>
+			</table><%}%>
+			<br/><br/><br/>
+		<a href="/order">Order</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<style>
+			body{
+				background-color: aqua;
+			}
+			a{
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "container">
+			<h1>Welcome to Order Page!!</h1>
+			<h3>Order Form</h3>
+			<form action="/order" method="POST">
+				Email:
+				<input type="email" name="email"><br/><br/>
+				Item_Name:
+				<input type="text" name="name"/><br/><br/>
+				Quantity:
+				<input type="quantity" name="quantity"/><br/><br/><br/>
+				<button type="submit">Submit</button>
+			</form>
+			<br/><br/>
+			<a href="/detail">Deatils</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<style>
+			body{
+				background-color: aqua;
+			}
+			table, th, td{
+				  border: 1px solid black;
+				  border-collapse: collapse;
+			}
+			.id{
+				width: 100px;
+			}
+			.iid{
+				width: 120px;
+			}
+			.name{
+				width: 130px;
+			}
+			.quantity{
+				width: 170px;
+			}
+			a{
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "container">
+			<h1>Welcome to Order Page!!</h1>
+			<h3>Order Table</h3>
+				<table>
+				<tr>
+					<th class="id">Customer_Id</th>
+					<th class="iid">Inventory_Id</th>
+					<th class="name">Item_Name</th>
+					<th class="quantity">Qauntity</th>
+				</tr>
+			</table>
+				<% for(let i=0;i<order.length;i++){%>
+				<table>
+				<tr>
+					<td class="id"><%= order[i].Customer_Id %></td>
+					<td class="iid"><%= order[i].Inventory_Id %></td>
+					<td class="name"><%= order[i].Item_Name %></td>
+					<td class="quantity"><%= order[i].Quantity %></td>
+				</tr>
+			</table><%}%>
+
+			<br/><br/>
+			<a href="/">Home</a>
+		</div>
+	</body>
+</html>
